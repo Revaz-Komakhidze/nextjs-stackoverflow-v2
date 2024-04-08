@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Theme from "./Theme";
+import MobileNav from "./MobileNav";
 
 const Navbar = () => {
   return (
@@ -14,11 +15,13 @@ const Navbar = () => {
           height={23}
           alt="stack overflow v2"
         />
-        <p className="h2-bold font-spaceGrotesk text-dark-100 dark:text-light-900 max-sm:hidden">
+        <p className="h2-bold font-spaceGrotesk text-dark-100">
           Stack Overflow <span className="text-primary-500">V2</span>
         </p>
       </Link>
-      GlobalSearch
+
+      {/* <GlobalSearch /> */}
+
       <div className="flex-between gap-5">
         <Theme />
 
@@ -31,6 +34,8 @@ const Navbar = () => {
             }}
           />
         </SignedIn>
+
+        <MobileNav />
       </div>
     </nav>
   );
